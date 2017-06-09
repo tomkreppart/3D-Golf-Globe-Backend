@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
     table.integer("ranking").notNullable()
     table.string("name").notNullable()
     table.string("image").notNullable()
-    table.integer("dateFounded").notNullable()
+    table.integer("yearFounded").notNullable()
     table.string("privatOrPublic").notNullable()
     table.string("city").notNullable()
     table.string("stateOrProvince").notNullable()
