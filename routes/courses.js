@@ -16,4 +16,12 @@ router.get('/', (req, res, next) => {
     })
 })
 
+router.get('/:id', (req, res, next) => {
+  knex('courses')
+    .where({id: req.params.id})
+    .first()
+    .then(courses => res.json(courses))
+    .catch(err => next(err))
+})
+
 module.exports = router;
