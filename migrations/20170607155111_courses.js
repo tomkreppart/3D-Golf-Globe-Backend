@@ -13,8 +13,8 @@ exports.up = function(knex, Promise) {
     table.string("architects").notNullable()
     table.integer("yards").notNullable()
     table.integer("par").notNullable()
-    table.float('lat', 14, 10).notNullable()
-    table.float('lng', 14, 10).notNullable()
+    table.decimal('lat', 14, 10).notNullable()
+    table.decimal('lng', 14, 10).notNullable()
     table.text("description").notNullable()
   })
 }
